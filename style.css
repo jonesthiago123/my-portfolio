@@ -1,16 +1,16 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
+  background: color #ffffff;
+  color:#ffffff;
 }	
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: navy;
-  color: white;
+  background: #137a63;
+  color: rgb(255, 255, 255);
   padding: 15px 30px;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   margin: 0 10px;
 }
@@ -29,8 +29,8 @@ body {
 }
 
 button {
-  background: orange;
-  color: black;
+  background:#0a3a2a;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 10px 16px;
   cursor: pointer;
@@ -38,18 +38,19 @@ button {
 }
 
 button:hover {
-  background: gold;
+  background: rgb(124, 124, 123);
 }
 
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: lightblue;
+  background: #5aa17f;
 }
 
 .section {
   padding: 50px 30px;
   text-align: center;
+  background: rgb(84, 200, 144)
 }
 
 .card-container {
@@ -61,7 +62,7 @@ button:hover {
 
 .card,
 .project-card {
-  background: white;
+  background: #0a3a2a;
   padding: 25px;
   width: 220px;
   border-radius: 10px;
@@ -69,13 +70,13 @@ button:hover {
 }
 
 .project-card a {
-  color: navy;
+  color: #ffffff;
   font-weight: bold;
 }
 
 .footer {
   text-align: center;
-  background: navy;
+  background: #137a63;
   color: white;
   padding: 20px;
 }
@@ -86,16 +87,39 @@ button:hover {
   color: white;
 }
 
+.dark .navbar {
+  background-color: #101010;
+}
+
 .dark .hero {
   background-color: #333;
 }
 
 .dark .card,
 .dark .project-card {
-  background-color: #222;
+  background-color: #0a3a2a;
   color: white;
 }
 
+.dark .nav-links a {
+  color: rgb(255, 255, 255);
+}
+
+.dark .footer {
+  background-color: #101010;
+
+}
+.dark .section {
+  background-color: #000000;
+}
+
 .dark .project-card a {
-  color: orange;
+  color: rgb(77, 76, 76);
+}
+.dark .button {
+  background-color: #3a3939;
+  color: rgb(255, 255, 255);
+}
+.dark .project-card a {
+  color: rgb(83, 83, 83);
 }
