@@ -74,9 +74,68 @@
     </p>
   </section>
 
+  <section class="values-section">
+    <h2>My Values</h2>
+
+    <div class="card-container">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>Integrity</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>Doing the right thing for the right reason, even when no one is watching.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>Compassion</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>Showing empathy and kindness to others without expecting anything in return.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>Authenticity</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>Staying true to your genuine self, beliefs, and voice.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
   <footer class="footer">
     <p>© 2026 My Portfolio | Built during Choicest Fruit SYEP Internship</p>
+    <div class="visitor-counter-box">
+    <h3>Visitors</h3>
+    <div class="visitor-number" id="visitorCount">125</div>
+    </ul>
+</div>
   </footer>
+<script>
+let visits = localStorage.getItem("visits");
+
+if (visits === null) {
+    visits = 1;
+} else {
+    visits = Number(visits) + 1;
+}
+
+localStorage.setItem("visits", visits);
+
+document.getElementById("visitorCount").textContent = visits;
+</script>
 
   <script src="script.js"></script>
 </body>

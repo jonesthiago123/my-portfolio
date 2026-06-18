@@ -81,6 +81,147 @@ button:hover {
   font-weight: bold;
 }
 
+.values-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #127152;
+}
+
+.values-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.flip-card {
+    width: 250px;
+    height: 180px;
+    perspective: 1000px;
+    animation: floatUp 1s ease forwards;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(21, 247, 164, 0.941);
+}
+
+.flip-card-front {
+    background: #127152;
+    color: white;
+}
+
+.flip-card-front h3 {
+    font-size: 1.8rem;
+}
+
+.flip-card-back {
+    background: #127152;
+    color: #fdfdfd;
+    transform: rotateY(180deg);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flip-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.flip-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.flip-card:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.visitor-counter-box {
+    max-width: 300px;
+    margin: 50px auto 0;
+    padding: 20px;
+    background: #f0fff7;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    text-align: center;
+    border: 2px solid #b8f2d8;
+}
+
+.visitor-counter-box h3 {
+    color: #2d6a4f;
+}
+
+.visitor-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #52b788;
+    margin: 15px 0;
+    animation: pulse 2s infinite;
+}
+
+.visitor-counter-box p {
+    color: #2d6a4f;
+}
+
+.visitor-counter-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.visitor-counter-box li {
+    padding: 5px 0;
+    color: #40916c;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .footer {
   text-align: center;
   background: #137a63;
@@ -88,7 +229,6 @@ button:hover {
   padding: 20px;
 }
 
-/* Dark mode */
 .dark {
   background-color: #111;
   color: white;
